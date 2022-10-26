@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NewItemForm } from "./NewItemForm";
 import { AddItemButton } from "./styles";
 
 interface AddNewItemProps {
@@ -14,6 +15,14 @@ export const AddNewItem = ({
   const [showForm, setShowForm] = useState(false);
 
   if (showForm) {
+    return (
+      <NewItemForm
+        onAdd={(text) => {
+          onAdd(text);
+          setShowForm(false);
+        }}
+      />
+    );
   }
 
   return (

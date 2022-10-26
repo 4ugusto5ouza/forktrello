@@ -70,7 +70,11 @@ export const NewItemButton = styled.button`
   box-shadow: none;
   color: #fff;
   padding: 6px 12px;
+  cursor: pointer;
   text-align: center;
+  &:hover {
+    background-color: #5ad000;
+  }
 `;
 
 export const NewItemInput = styled.input`
